@@ -1,0 +1,152 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eeeaff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 15px;
+}
+
+.product-card{
+    width: 400px;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.product-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-image{
+    height: 310px;
+    background: linear-gradient(
+        135deg,
+        #62568f,
+        #b5a1e9
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+.product-image img:hover{
+    transform: scale(1.10);
+}
+
+.product-info{
+    background: white;
+    padding: 22px;
+    border-radius: 22px 22px 0 0;
+    margin-top: -15px;
+    position: relative;
+}
+
+.product-info h2{
+    font-size: 23px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.product-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.product-tags span{
+    border: 1px solid #aaa;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+    border-radius: 4px;
+}
+
+.product-info p{
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.product-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.price span{
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.price h3{
+    font-size: 25px;
+    color: #222;
+    margin-top: 3px;
+}
+
+.cart-btn{
+    background: #62518f;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 15px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cart-btn:hover {
+    background: #ed3485;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(98, 81, 143, 0.3);
+}
+
+@media (max-width: 450px) {
+    .product-card{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .product-image{
+        height: 260px;
+    }
+
+    .product-info{
+        padding: 18px;
+    }
+
+    .product-info h2{
+        font-size: 21px;
+    }
+
+    .cart-btn{
+        padding: 13px 16px;
+        font-size: 14px;
+    }
+}
